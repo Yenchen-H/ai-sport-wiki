@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 在運動科學能做什麼？</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EEF1EC;--paper:#FBFCF8;--ink:#14231C;--muted:#5B6B62;--accent:#1F7A4D;--accent2:#E8A33D;--line:#D5DDD6;--chip:#E6ECE6}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:var(--bg);color:var(--ink);font-family:"Noto Sans TC",system-ui,sans-serif;overflow:hidden}
+#stage{position:absolute;left:50%;top:50%;width:1280px;height:720px;transform-origin:center center}
+.slide{position:absolute;inset:0;width:1280px;height:720px;overflow:hidden;background:var(--paper);border-radius:18px;
+  box-shadow:0 10px 40px rgba(20,35,28,.12);padding:64px 84px 96px;display:none}
+.slide.active{display:block}
+.slide::before{content:"";position:absolute;left:0;top:0;bottom:0;width:10px;background:var(--accent)}
+.num{position:absolute;top:34px;right:48px;font-weight:900;font-size:22px;color:var(--accent)}
+.num span{color:var(--muted);font-weight:500;font-size:16px;margin-left:6px}
+h2{font-size:46px;font-weight:900;line-height:1.25;margin-bottom:40px;letter-spacing:.5px}
+ul{list-style:none;display:flex;flex-direction:column;gap:22px}
+li{font-size:28px;line-height:1.5;padding-left:34px;position:relative}
+li::before{content:"";position:absolute;left:0;top:.62em;width:14px;height:14px;border-radius:4px;background:var(--accent2)}
+.cite{display:inline-block;margin-left:10px;font-size:15px;font-weight:500;color:var(--muted);background:var(--chip);
+  border-radius:999px;padding:2px 10px;vertical-align:middle;white-space:nowrap}
+footer{position:absolute;left:84px;right:48px;bottom:30px;font-size:15px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+footer a{color:var(--accent);text-decoration:none;margin-right:4px}
+footer a:hover{text-decoration:underline}
+.wl{display:inline-block;background:var(--accent);color:#fff;font-weight:700;border-radius:6px;padding:1px 8px;margin-right:10px}
+.cover{background:linear-gradient(135deg,#14231C 0%,#1F4D36 100%);color:#F3F6F1;padding:120px 96px}
+.cover::before{background:var(--accent2)}
+.kicker{font-size:20px;letter-spacing:2px;color:#BFD8C8;margin-bottom:28px}
+.cover h1{font-size:76px;font-weight:900;line-height:1.2;margin-bottom:28px}
+.cover .sub{font-size:30px;color:#DDE8E0}
+.hint{position:absolute;bottom:48px;left:96px;font-size:18px;color:#9FBCA9}
+#bar{position:fixed;left:0;bottom:0;height:5px;background:var(--accent);transition:width .2s}
+#nav{position:fixed;right:18px;bottom:16px;display:flex;gap:8px}
+#nav button{border:0;background:var(--paper);color:var(--ink);font-size:18px;width:42px;height:42px;border-radius:50%;
+  box-shadow:0 2px 8px rgba(0,0,0,.12);cursor:pointer}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#0E1512;--paper:#16201B;--ink:#E7EEE9;--muted:#9AABA1;--line:#2C3A33;--chip:#22302A;--accent:#4CC38A}
+}
+</style>
+</head>
+<body>
+<div id="stage">
+<section class="slide cover" data-wiki="">
+  <div class="kicker">生成式人工智慧・第十週作業・LLM Wiki 教學簡報</div>
+  <h1>AI 在運動科學能做什麼？</h1>
+  <p class="sub">從 5 篇期刊整理的 LLM Wiki 出發</p>
+  <div class="hint">按 → 或點擊右半邊翻頁</div>
+</section>
+<section class="slide" data-wiki="wiki/concepts/ai-in-sport.md, wiki/concepts/performance-analysis.md">
+  <div class="num">02<span>/ 14</span></div>
+  <h2>為什麼運動需要 AI？</h2>
+  <ul><li><span class="txt">資料又多又複雜，傳統分析方法開始不夠用</span><span class="cite">Zhou 2025, p.2</span></li><li><span class="txt">一場足球約 1,500 個事件，追蹤資料每秒 25 格</span><span class="cite">Rothe 2026, p.2</span></li><li><span class="txt">人工處理太慢，常趕不上比賽中的即時回饋</span><span class="cite">Zhou 2025, p.4</span></li></ul>
+  <footer><span class="wl">Wiki</span><a href="../../wiki/concepts/ai-in-sport.md">concepts/ai-in-sport.md</a>、<a href="../../wiki/concepts/performance-analysis.md">concepts/performance-analysis.md</a></footer>
+</section>
+<section class="slide" data-wiki="wiki/concepts/ai-in-sport.md">
+  <div class="num">03<span>/ 14</span></div>
+  <h2>AI 在運動的五大領域</h2>
+  <ul><li><span class="txt">AI in sport：處理大量複雜資料並據以行動的演算法與系統</span><span class="cite">Zhou 2025, p.2</span></li><li><span class="txt">五大領域：生物力學、表現分析、運動醫學、健康監測、選才</span><span class="cite">Zhou 2025, p.3</span></li><li><span class="txt">機器學習（從資料找規律）：預測傷害、建模表現、選才</span><span class="cite">Zhou 2025, p.2</span></li><li><span class="txt">電腦視覺（讓電腦看懂影像）：擷取動作、評估技術</span><span class="cite">Zhou 2025, p.3</span></li></ul>
+  <footer><span class="wl">Wiki</span><a href="../../wiki/concepts/ai-in-sport.md">concepts/ai-in-sport.md</a></footer>
+</section>
+<section class="slide" data-wiki="wiki/concepts/biomechanics-ai.md">
+  <div class="num">04<span>/ 14</span></div>
+  <h2>應用①：看懂動作（生物力學）</h2>
+  <ul><li><span class="txt">穿戴感測器 IMU＋AI 判斷深蹲姿勢對不對，準確率 96.3%</span><span class="cite">Zhou 2025, p.3</span></li><li><span class="txt">攝影機影片就能自動追蹤姿勢與關節角度</span><span class="cite">Zhou 2025, p.4</span></li><li><span class="txt">下一步：用手機影片這類平價方案，讓一般人也能用</span><span class="cite">Zhou 2025, p.4</span></li></ul>
+  <footer><span class="wl">Wiki</span><a href="../../wiki/concepts/biomechanics-ai.md">concepts/biomechanics-ai.md</a></footer>
+</section>
+<section class="slide" data-wiki="wiki/concepts/performance-analysis.md, wiki/concepts/tactical-states.md, wiki/sources/rothe2026.md">
+  <div class="num">05<span>/ 14</span></div>
+  <h2>應用②：看懂比賽（戰術分析）</h2>
+  <ul><li><span class="txt">影像辨識模型 YOLO 追蹤澳式足球員位置，F1 = 0.96</span><span class="cite">Zhou 2025, p.4</span></li><li><span class="txt">過去辨識戰術要人工看影片，主觀又耗時</span><span class="cite">Rothe 2026, p.2</span></li><li><span class="txt">新做法：依雙方球員在各區人數分群，自動判斷戰術</span><span class="cite">Rothe 2026, p.6</span><span class="cite">Rothe 2026, p.7</span></li><li><span class="txt">9 種戰術狀態的 F1 介於 0.76–0.96</span><span class="cite">Rothe 2026, p.10</span></li></ul>
+  <footer><span class="wl">Wiki</span><a href="../../wiki/concepts/performance-analysis.md">concepts/performance-analysis.md</a>、<a href="../../wiki/concepts/tactical-states.md">concepts/tactical-states.md</a>、<a href="../../wiki/sources/rothe2026.md">sources/rothe2026.md</a></footer>
+</section>
+<section class="slide" data-wiki="wiki/concepts/injury-prediction.md">
+  <div class="num">06<span>/ 14</span></div>
+  <h2>應用③：預測傷害</h2>
+  <ul><li><span class="txt">NBA：深度學習模型 METIC 用過去傷病與前 5 場比賽預測</span><span class="cite">Cohan 2021, p.4</span></li><li><span class="txt">英超：預測 7 天內的非接觸性傷害，抓到 77%</span><span class="cite">Majumdar 2024, p.8</span></li><li><span class="txt">代價：誤報多（precision 13%），可能讓沒事的球員也休息</span><span class="cite">Majumdar 2024, p.8</span></li><li><span class="txt">好處：真正高風險的球員多半也會被保護到</span><span class="cite">Majumdar 2024, p.9</span></li></ul>
+  <footer><span class="wl">Wiki</span><a href="../../wiki/concepts/injury-prediction.md">concepts/injury-prediction.md</a></footer>
+</section>
+<section class="slide" data-wiki="wiki/concepts/sports-medicine-ai.md, wiki/concepts/talent-identification.md">
+  <div class="num">07<span>/ 14</span></div>
+  <h2>應用④：醫療與選才</h2>
+  <ul><li><span class="txt">AI 當第二意見：受訓醫師 ACL 診斷從 84% 升到 96%</span><span class="cite">Zhou 2025, p.5</span></li><li><span class="txt">但看不懂理由的黑盒子，醫師不願依賴</span><span class="cite">Zhou 2025, p.6</span></li><li><span class="txt">傳統選才靠主觀評估，容易受偏見與地區限制</span><span class="cite">Zhou 2025, p.8</span></li><li><span class="txt">AI 可能降低偏誤，也有機會讓偏遠地區選手被看見</span><span class="cite">Zhou 2025, p.8</span></li></ul>
+  <footer><span class="wl">Wiki</span><a href="../../wiki/concepts/sports-medicine-ai.md">concepts/sports-medicine-ai.md</a>、<a href="../../wiki/concepts/talent-identification.md">concepts/talent-identification.md</a></footer>
+</section>
+<section class="slide" data-wiki="wiki/concepts/class-imbalance-metrics.md">
+  <div class="num">08<span>/ 14</span></div>
+  <h2>陷阱①：準確率 99.8% 卻沒用的模型</h2>
+  <ul><li><span class="txt">不平衡資料：NBA 資料中「受傷」不到 4%</span><span class="cite">Cohan 2021, p.3</span></li><li><span class="txt">永遠猜「不會受傷」，accuracy 就有 99.8%</span><span class="cite">Cohan 2021, p.6</span></li><li><span class="txt">但這個模型一個傷害都抓不到，完全沒用</span><span class="cite">Cohan 2021, p.6</span></li><li><span class="txt">要改看 ROC AUC、average precision 等指標</span><span class="cite">Cohan 2021, p.6</span></li></ul>
+  <footer><span class="wl">Wiki</span><a href="../../wiki/concepts/class-imbalance-metrics.md">concepts/class-imbalance-metrics.md</a></footer>
+</section>
+<section class="slide" data-wiki="wiki/concepts/model-validation.md">
+  <div class="num">09<span>/ 14</span></div>
+  <h2>陷阱②：怎麼驗證才可信？</h2>
+  <ul><li><span class="txt">要用模型沒看過的資料測試，否則會過度自信</span><span class="cite">Cohan 2021, p.4</span></li><li><span class="txt">英超研究：訓練時很重要的特徵，到測試資料就不重要</span><span class="cite">Majumdar 2024, p.10</span></li><li><span class="txt">戰術研究：故意用訓練時沒出現的球隊來測試</span><span class="cite">Rothe 2026, p.6</span></li></ul>
+  <footer><span class="wl">Wiki</span><a href="../../wiki/concepts/model-validation.md">concepts/model-validation.md</a></footer>
+</section>
+<section class="slide" data-wiki="wiki/concepts/explainable-ai.md, wiki/concepts/shap.md">
+  <div class="num">10<span>/ 14</span></div>
+  <h2>讓人看懂①：打開黑盒子</h2>
+  <ul><li><span class="txt">白盒模型（如決策樹）：輸入怎麼變成輸出，一看就懂</span><span class="cite">Majumdar 2024, p.3</span></li><li><span class="txt">黑盒模型（如神經網路）：可能更準，但要另外解釋</span><span class="cite">Majumdar 2024, p.3</span></li><li><span class="txt">SHAP：用賽局理論算出每個特徵對預測的貢獻</span><span class="cite">Majumdar 2024, p.3</span></li><li><span class="txt">但 SHAP 的整體解釋有時會誤導</span><span class="cite">Majumdar 2024, p.10</span></li><li><span class="txt">看不懂理由，教練可能難以信任 AI</span><span class="cite">Zhou 2025, p.8</span></li></ul>
+  <footer><span class="wl">Wiki</span><a href="../../wiki/concepts/explainable-ai.md">concepts/explainable-ai.md</a>、<a href="../../wiki/concepts/shap.md">concepts/shap.md</a></footer>
+</section>
+<section class="slide" data-wiki="wiki/concepts/wordalisation.md">
+  <div class="num">11<span>/ 14</span></div>
+  <h2>讓人看懂②：讓 AI 說人話</h2>
+  <ul><li><span class="txt">xG（預期進球）：依位置、角度、防守估計射門進球機率</span><span class="cite">Rahimian 2025, p.1</span></li><li><span class="txt">Wordalisation：用 LLM 把模型的數字寫成教練看得懂的句子</span><span class="cite">Rahimian 2025, p.2</span></li><li><span class="txt">完整版最吸引人、準確度第二</span><span class="cite">Rahimian 2025, p.10</span></li><li><span class="txt">取捨在於沒描述所有面向，不是寫錯事實</span><span class="cite">Rahimian 2025, p.11</span></li><li><span class="txt">準確度只檢查 2 個特徵，而且由 LLM 評分</span><span class="cite">Rahimian 2025, p.8</span><span class="cite">Rahimian 2025, p.10</span></li></ul>
+  <footer><span class="wl">Wiki</span><a href="../../wiki/concepts/wordalisation.md">concepts/wordalisation.md</a></footer>
+</section>
+<section class="slide" data-wiki="wiki/concepts/ethics-privacy.md, wiki/concepts/injury-prediction.md">
+  <div class="num">12<span>/ 14</span></div>
+  <h2>挑戰：倫理與隱私</h2>
+  <ul><li><span class="txt">運動資料的風險：未授權存取、濫用、歧視</span><span class="cite">Zhou 2025, p.9</span></li><li><span class="txt">受傷風險預測可能被拿來排除選手</span><span class="cite">Zhou 2025, p.9</span></li><li><span class="txt">聯邦學習：資料留在本機訓練，只傳模型更新</span><span class="cite">Zhou 2025, p.9</span></li></ul>
+  <footer><span class="wl">Wiki</span><a href="../../wiki/concepts/ethics-privacy.md">concepts/ethics-privacy.md</a>、<a href="../../wiki/concepts/injury-prediction.md">concepts/injury-prediction.md</a></footer>
+</section>
+<section class="slide" data-wiki="wiki/concepts/injury-prediction.md, wiki/concepts/training-load.md">
+  <div class="num">13<span>/ 14</span></div>
+  <h2>研究還在吵什麼？</h2>
+  <ul><li><span class="txt">過去傷病：NBA 研究說重要，但不在模型前五名</span><span class="cite">Cohan 2021, p.7</span></li><li><span class="txt">英超研究：自建的「上次受傷部位」在訓練資料排第一</span><span class="cite">Majumdar 2024, p.7</span><span class="cite">Majumdar 2024, p.8</span></li><li><span class="txt">兩篇的運動、傷害類型（英超只看非接觸性）都不同</span><span class="cite">Majumdar 2024, p.3</span><span class="cite">Cohan 2021, p.3</span></li><li><span class="txt">負荷比 ACWR：慢性負荷低時超過 2，風險高 5–7 倍</span><span class="cite">Majumdar 2024, p.2</span></li><li><span class="txt">英超資料多數傷害落在 0.5–1.5，但這是次數不是風險</span><span class="cite">Majumdar 2024, p.2</span><span class="cite">Majumdar 2024, p.11</span></li></ul>
+  <footer><span class="wl">Wiki</span><a href="../../wiki/concepts/injury-prediction.md">concepts/injury-prediction.md</a>、<a href="../../wiki/concepts/training-load.md">concepts/training-load.md</a></footer>
+</section>
+<section class="slide" data-wiki="wiki/concepts/ai-in-sport.md">
+  <div class="num">14<span>/ 14</span></div>
+  <h2>總結：AI 在運動的未來</h2>
+  <ul><li><span class="txt">普及化：資源少的團隊也用得到分析工具</span><span class="cite">Zhou 2025, p.11</span></li><li><span class="txt">即時調整：穿戴裝置讓比賽中就能修正策略</span><span class="cite">Zhou 2025, p.11</span></li><li><span class="txt">但真實場域的可靠性與穩健性仍有疑慮</span><span class="cite">Zhou 2025, p.3</span></li><li><span class="txt">記得：看指標、看驗證方式、看能不能解釋</span></li></ul>
+  <footer><span class="wl">Wiki</span><a href="../../wiki/concepts/ai-in-sport.md">concepts/ai-in-sport.md</a></footer>
+</section>
+</div>
+<div id="bar"></div>
+<div id="nav"><button id="prev" aria-label="上一張">‹</button><button id="next" aria-label="下一張">›</button></div>
+<script>
+const slides=[...document.querySelectorAll('section.slide')];let cur=0;
+function fit(){const s=Math.min(innerWidth/1320,innerHeight/760);document.getElementById('stage').style.transform=`translate(-50%,-50%) scale(${s})`}
+window.showSlide=function(i){cur=Math.max(0,Math.min(slides.length-1,i));slides.forEach((s,k)=>s.classList.toggle('active',k===cur));
+  document.getElementById('bar').style.width=((cur+1)/slides.length*100)+'%';if(location.hash!=='#'+(cur+1))history.replaceState(null,'','#'+(cur+1))}
+document.addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key))showSlide(cur+1);if(['ArrowLeft','PageUp'].includes(e.key))showSlide(cur-1)});
+document.getElementById('next').onclick=()=>showSlide(cur+1);document.getElementById('prev').onclick=()=>showSlide(cur-1);
+document.getElementById('stage').addEventListener('click',e=>{if(e.target.closest('a'))return;showSlide(cur+(e.clientX>innerWidth/2?1:-1))});
+addEventListener('resize',fit);fit();showSlide((parseInt(location.hash.slice(1))||1)-1);
+</script>
+</body>
+</html>
