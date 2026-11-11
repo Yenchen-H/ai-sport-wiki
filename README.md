@@ -5,7 +5,7 @@
 - Wiki 目錄：[wiki/index.md](wiki/index.md)
 - 規則檔：[AGENTS.md](AGENTS.md)
 - 需求訪談紀錄：[docs/需求訪談紀錄.md](docs/需求訪談紀錄.md)
-- 原始資料（5 篇 Open Access 期刊）：[raw/README.md](raw/README.md)
+- 原始資料（9 篇 Open Access 期刊）：[raw/README.md](raw/README.md)
 - 教學簡報：[slides/ai-in-sport/](slides/ai-in-sport/index.html)（GitHub Pages：https://yenchen-h.github.io/ai-sport-wiki/slides/ai-in-sport/ ）
 - 作業說明（流程圖、檢查紀錄、反思）：[docs/作業說明.md](docs/作業說明.md)
 - 檢查腳本：`python3 scripts/lint.py --final`、`python3 scripts/check_slides.py <關卡> slides/ai-in-sport`

@@ -1,7 +1,7 @@
 ---
 type: note
 title: 研究筆記：專家知識 × 機器學習
-sources: [rothe2026]
+sources: [rothe2026, rongen2026, zhou2025]
 updated: 2026-11-10
 ---
 
@@ -12,9 +12,11 @@ updated: 2026-11-10
 - Rothe 先由專家定義狀態與規則，再用資料分群，最後用專家規則替群貼標籤 [Rothe 2026, p.7] [Rothe 2026, p.8]。
 - 混合做法的結果（macro F1 0.92）優於純規則法（0.79）[Rothe 2026, p.10]。
 
+- Rongen 建議選才標準結合選手特徵、實際表現與專家主觀意見 [Rongen 2026, p.12]。（推論）這是非 AI 領域對「專家＋資料」混合做法的支持。
+
 ## 依據
 
-- [戰術狀態](../concepts/tactical-states.md)
+- [戰術狀態](../concepts/tactical-states.md)、[教練與選才](../concepts/talent-identification.md)
 
 ## 和使用者研究的關係
 
@@ -22,5 +24,8 @@ updated: 2026-11-10
 - （推論）Rothe 的做法可以當方法論參考：專家知識負責「定義與標籤」，資料方法負責「分群或預測」，並和純專家法、純資料法的 baseline 比較。
 
 ## 待查
+
+- 資源有限的組織真的用得起 AI 選才嗎？Zhou 指出 AI 影片分析系統很貴 [Zhou 2025, p.8]，Rongen 的受訪國家普遍資源不足、教練多為志工 [Rongen 2026, p.11] [Rongen 2026, p.12]。（推論）低成本、可解釋的選才工具可能是研究缺口。
+- （推論）Rongen 全文沒有討論 AI，和 Zhou 的主題不同，所以概念頁把兩者寫成「比較」而不是說法分歧。
 
 - 選才研究中，專家權重和 Random Forest 特徵重要性如果不一致，要怎麼處理？

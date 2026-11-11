@@ -1,7 +1,7 @@
 ---
 type: concept
 title: 可解釋 AI（XAI）
-sources: [zhou2025, cohan2021, majumdar2024, rahimian2025]
+sources: [zhou2025, cohan2021, majumdar2024, rahimian2025, buhamra2025]
 updated: 2026-11-10
 ---
 
@@ -34,6 +34,9 @@ updated: 2026-11-10
 
 - Rahimian 2025：用可解釋的 logistic regression 建 xG，再把特徵貢獻轉成文字給教練 [Rahimian 2025, p.2]。
 - Rahimian 指出 SHAP 的數值 "do not automatically translate into actionable insights for football practitioners" [Rahimian 2025, p.2]
+- Buhamra 2025：用 PDP 與 ICE 解釋 XGBoost [Buhamra 2025, p.14]。
+- PDP（partial dependence plot）顯示一個特徵對預測的平均邊際效果；ICE 則畫出每一筆觀測各自的效果，能看出個體差異 [Buhamra 2025, p.10]。
+- PDP 有一個重要假設：感興趣的特徵和其他特徵不相關，否則估計可能不切實際 [Buhamra 2025, p.10]。
 
 ### ⚠ 說法分歧：black-box 加事後解釋，還是一開始就用可解釋模型？
 

@@ -1,7 +1,7 @@
 ---
 type: concept
 title: 模型驗證方式
-sources: [cohan2021, majumdar2024, rothe2026]
+sources: [cohan2021, majumdar2024, rothe2026, buhamra2025, goel2021]
 updated: 2026-11-10
 ---
 
@@ -17,6 +17,11 @@ updated: 2026-11-10
 - Majumdar 2024：前 4.5 季訓練（內部再做 10-fold cross-validation），之後半季當獨立測試集 [Majumdar 2024, p.4]。
 - Rothe 2026：3 場訓練、12 場測試，測試集刻意包含訓練時沒出現的球隊，用來檢驗能否推廣到沒看過的球隊 [Rothe 2026, p.6]。
 - Rothe 也指出，其他球季與聯賽的適用性還沒測試，翻譯表可能需要定期更新 [Rothe 2026, p.16]。
+- Buhamra 2025（網球）：比較三種策略，依時間順序擴大訓練資料的 expanding window 明顯優於 leave-one-tournament-out CV [Buhamra 2025, p.15]。
+- 作者認為 "the predictions should occur in chronological order" [Buhamra 2025, p.13]
+- 但只用最近 3 年的 rolling window 又表現較差，訓練資料必須夠大 [Buhamra 2025, p.16]。
+- Buhamra 與 Majumdar 都支持依時間順序驗證，兩篇結論一致 [Buhamra 2025, p.16] [Majumdar 2024, p.11]。
+- Goel 2021（板球）：依球季切分，用 2019 年當測試資料，訓練集內再用 KFold TimeSeriesSplit [Goel 2021, p.3]。
 
 ### ⚠ 說法分歧：測試集真的完全獨立嗎？（同一來源內部）
 

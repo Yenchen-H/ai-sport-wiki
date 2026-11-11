@@ -66,3 +66,37 @@
 - ⑧ render_slides.py 輸出 index.html
 - ⑨ 渲染檢查：第 1 次腳本 bug（封面沒算到）→ 修正後通過，14 張無溢出，截圖存 screenshots/
 - ⑩ 交件報告：slides/ai-in-sport/report.md
+
+## 2026-11-11 ingest #6：buhamra2025（網球大滿貫預測）
+- 第二批 4 篇新文獻放入 raw/（buhamra2025、goel2021、ferreira2026、rongen2026），raw/README.md 補書目
+- 使用者決定 rongen2026（籃網球選才，非 AI 研究）也要 ingest
+- 確認清單經使用者同意（標 ⚠：正確率上限；只寫比較：模型選擇重不重要）
+- 新增：sources/buhamra2025.md；concepts/match-outcome-prediction
+- 更新：concepts/ model-validation、explainable-ai、class-imbalance-metrics；notes/ talent-id-evaluation-pitfalls
+- lint.py --final：全過（28 頁、6 篇來源）
+- AI 審查（精簡）：34 句，必修 1、建議 2 → 修必修（docs/review/ingest06_buhamra2025.md）
+
+## 2026-11-11 ingest #7：goel2021（板球即時預測）
+- 使用者決定 9 篇都做完再交作業；依已列出的確認清單寫入
+- 新增：sources/goel2021.md
+- 更新：concepts/ match-outcome-prediction（即時預測、深度學習比較）、model-validation
+- lint.py --final：全過（29 頁、7 篇來源）
+- AI 審查（精簡）：28 句，必修 3、建議 3 → 修必修 3＋同一處數字的建議 1（docs/review/ingest07_goel2021.md）
+- 新規則候選：數字一律以表格為準，摘要數字要對照表格
+- 流程失誤：修正後的 lint 有 1 個錯（引文後面第一個出處標成 p.6，腳本拿 p.6 比對），但當時的指令沒有在 lint 失敗時停下，就先 commit 了 → 修正引文出處順序，lint 全過後重新 commit。之後 commit 前一律先確認 lint 通過
+
+## 2026-11-11 ingest #8：ferreira2026（區塊鏈＋MCP）
+- 確認清單經使用者同意；使用者選擇把「MCP 提出者歸屬可能有誤」寫進研究筆記待查
+- 新增：sources/ferreira2026.md；concepts/athlete-consent-provenance
+- 更新：concepts/ ethics-privacy、llms-in-sport；notes/ llm-evaluation-gap
+- lint.py --final：全過（31 頁、8 篇來源）
+- AI 審查（精簡）：37 句，必修 0、建議 3（docs/review/ingest08_ferreira2026.md）
+
+## 2026-11-11 ingest #9：rongen2026（籃網球選才制度，非 AI 研究）
+- 確認清單經使用者同意
+- 新增：sources/rongen2026.md
+- 更新：concepts/talent-identification（新增「非 AI 背景」段落與比較）；notes/expert-knowledge-ml-hybrid
+- lint.py --final：全過（32 頁、9 篇來源）
+- AI 審查（精簡）：26 句，必修 1、建議 3
+- 修正必修時第 1 次寫法被 lint 擋下（概念頁的推論句沒有出處），推論改放研究筆記頁後全過（docs/review/ingest09_rongen2026.md）
+- **第二批 4 篇 ingest 完成，共 9 篇**

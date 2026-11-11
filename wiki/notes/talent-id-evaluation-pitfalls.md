@@ -1,7 +1,7 @@
 ---
 type: note
 title: 研究筆記：選才模型的評估陷阱
-sources: [cohan2021, majumdar2024]
+sources: [cohan2021, majumdar2024, buhamra2025]
 updated: 2026-11-10
 ---
 
@@ -23,6 +23,8 @@ updated: 2026-11-10
 
 - 時間切分：Majumdar 用前 4.5 季訓練、後半季測試 [Majumdar 2024, p.4]。（推論）選才研究可考慮「用前幾屆選手建模、後一屆選手測試」，而且測試資料不能拿來調參數（Majumdar 這點做得不夠乾淨，見 [模型驗證方式](../concepts/model-validation.md)）。
 - 換一個情境最佳模型就可能不同 [Majumdar 2024, p.12]。（推論）選才模型推廣到別的運動或年齡層時，要重新驗證。
+
+- Buhamra 的網球研究也發現 expanding window 優於 CV，而且模型差異不如預測策略與特徵工程重要 [Buhamra 2025, p.16]。（推論）選才研究可以「用前幾屆訓練、逐屆往後預測」，並把力氣放在指標（特徵）設計，而不是一直換模型。
 
 ## 待查
 

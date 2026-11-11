@@ -1,7 +1,7 @@
 ---
 type: concept
 title: 倫理與隱私
-sources: [zhou2025]
+sources: [zhou2025, ferreira2026]
 updated: 2026-11-10
 ---
 
@@ -23,6 +23,8 @@ updated: 2026-11-10
 - Federated learning：在本機裝置上訓練，只傳模型更新、不傳原始資料 [Zhou 2025, p.9]。
 - Encryption 與 anonymisation：保護傳輸中與儲存的資料，並移除可識別資訊 [Zhou 2025, p.9]。
 - 這些方法在運動資料上 "is still in its early stages" [Zhou 2025, p.9]。
+- 區塊鏈與可驗證憑證：Ferreira 用區塊鏈記錄查詢與資料雜湊，讓選手用可驗證憑證設定細分、有時效的同意，詳見 [選手同意與資料溯源](athlete-consent-provenance.md) [Ferreira 2026, p.2]。
+- Ferreira 也指出，技術只能支援 GDPR 原則，完整合規還需要組織措施，例如資料保護影響評估與選手教育 [Ferreira 2026, p.11]。
 
 ## 即時資料的可靠性
 

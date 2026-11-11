@@ -1,7 +1,7 @@
 ---
 type: concept
 title: 不平衡資料與評估指標
-sources: [cohan2021, majumdar2024, rothe2026]
+sources: [cohan2021, majumdar2024, rothe2026, buhamra2025]
 updated: 2026-11-10
 ---
 
@@ -24,6 +24,11 @@ updated: 2026-11-10
 - Rothe 的戰術狀態中，最少見的兩個狀態 F1 最低（0.76、0.84），所有 baseline 也都在這兩個狀態表現最弱 [Rothe 2026, p.10]。（推論）這和不平衡資料的問題類似。
 - 但作者自己的解釋不同：這兩個狀態受到「失球後刪除控球時間」與「控球片段太短」的前處理影響特別大 [Rothe 2026, p.16]。
 - Counter Build-up vs. High-Block 平均每場只有約 14 秒，作者認為這種數值不穩定可能影響戰術結論 [Rothe 2026, p.15]。
+
+## 反例：什麼時候可以用 accuracy
+
+- Buhamra 的網球資料中，第一位選手是隨機指定的 [Buhamra 2025, p.2]。
+- （推論）因此勝負兩類應大致平衡，分類正確率是合理的指標；Buhamra 也同時報告 Brier score 等指標 [Buhamra 2025, p.10]。
 
 ## 常見陷阱：沒有切分資料
 
